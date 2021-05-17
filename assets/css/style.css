@@ -136,7 +136,6 @@ h2 {
     font-size: 30px;
     width: 100%;
     height: 100px;
-
 }
 
 p {
@@ -155,7 +154,6 @@ p {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-
 }
 
 .div_button {
@@ -214,16 +212,26 @@ h3 {
     padding-top: 100px;
 }
 
-.container2 {
+.container {
     width: 100%;
-    height: 800px;
+    height: 925px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-image: url("/assets/img/ombre1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.container2 {
+    justify-content: flex-end;
+    background-image: url("../img/ombre1.jpg");
+    background-position: bottom;
+}
+
+.container3 {
+    justify-content: flex-start;
+    background-image: url("../img/sombre1.png");
 }
 
 .large {
@@ -238,6 +246,9 @@ h3 {
 .envoi {
     background-color: black;
     color: red;
+    font-size: 35px;
+    font-style: italic;
+    font-family: "Ink Free";
 }
 
 .formulaire {
@@ -292,4 +303,3 @@ input {
     width: 20%;
     word-wrap: break-word;
 }
-

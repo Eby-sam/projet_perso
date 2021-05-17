@@ -2,7 +2,7 @@
     include './_partials/head.php';
 ?>
     <form method="post" action="utils/insert.php">
-        <div id="container2" class="container2">
+        <div id="container2" class="container2 container">
             <div class="large">
                 <div class="formulaire">
                     <h1>Inscription</h1>
@@ -14,11 +14,6 @@
                     <input type="submit" class="envoi">
                 </div>
             </div>
-
-
-
-
-
         </div>
     </form>
 
