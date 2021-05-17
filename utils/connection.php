@@ -16,15 +16,15 @@ $valider=$_POST["valider"];
 $erreur="";
 if(isset($valider)){
     include("connexion.php");
-    $sel = new PDO ->prepare("select * from utilisateurs where pseudo=? and pass=? limit 1");
+    $sel = new PDO->prepare("select * from utilisateurs where pseudo=? and pass=? limit 1");
     $sel->execute(array($pseudo,$pass));
     $tab=$sel->fetchAll();
     if(count($tab)>0){
-        $_SESSION["prenomNom"]=ucfirst(strtolower($tab[0]["prenom"])).
-            " ".strtoupper($tab[0]["nom"]);
+        $_SESSION["pseudo"]=ucfirst(strtolower($tab[0]["pseudo"])).
+            " ".strtoupper($tab[0]["pseudo"]);
         $_SESSION["autoriser"]="oui";
         header("location:session.php");
     }
     else
-        $erreur="Mauvais login ou mot de passe!";
+        $erreur="Mauvais pseudo ou mot de passe!";
 }

@@ -15,6 +15,10 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
     echo 'Bonjour ' . $_SESSION['pseudo'];
 } ?>
 
+    <div id="div-titre">
+        <h1 id="title">CREEPY-BLOG</h1>
+    </div>
+
     <div id="banniere">
         <div id="accueil">accueil</div>
         <div id="menu">
@@ -26,6 +30,4 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
         <div id="sign">inscription</div>
         <div id="connect">connection</div>
     </div>
-    <div id="div-titre">
-        <h1>Robocop.Projet</h1>
-    </div>
+
