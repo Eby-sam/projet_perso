@@ -2,7 +2,7 @@
     include './_partials/head.php';
 ?>
     <form method="post" action="utils/insert.php">
-        <div id="container2" class="container2 container">
+        <div id="container2" class="containerInscript container">
             <div class="large">
                 <div class="formulaire">
                     <h1>Inscription</h1>

@@ -3,7 +3,7 @@ include './_partials/head.php';
 include './_partials/footer.php';
 ?>
 
-    <div class="container2">
+    <div class="containerMenu container">
         <div id="click_div">
             <button class="div_button">PHOTO</button>
             <button class="div_button">VIDEO</button>

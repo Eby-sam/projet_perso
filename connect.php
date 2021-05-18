@@ -2,7 +2,7 @@
     include './_partials/head.php';
 ?>
     <form method="post" action="utils/connection.php">
-        <div class="container3 container">
+        <div class="containerConnect container">
             <div class="large">
                 <div class="formulaire">
                     <h1>Connexion</h1>

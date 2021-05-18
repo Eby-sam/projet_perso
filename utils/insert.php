@@ -10,6 +10,10 @@ function issetPostParams(string ...$params): bool {
 }
 
 if(issetPostParams('name', 'firstname', 'pseudo', 'email', 'password')) {
+    if(empty($_POST['name']) || empty($_POST['firstname']) || empty($_POST['pseudo']) ||  empty($_POST['email'])
+     || empty($_POST['password'])) {
+        return false;
+    }
     try {
         $server = 'localhost';
         $db = 'projet_perso';
@@ -18,22 +22,12 @@ if(issetPostParams('name', 'firstname', 'pseudo', 'email', 'password')) {
 
         $bdd = new PDO("mysql:host=$server;dbname=$db;charset=utf8", $user, $pass);
 
-        $nom = $_POST['name'];
-        $prenom = $_POST['firstname'];
-        $pseudo = $_POST['pseudo'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
         $sql = $bdd->prepare("INSERT INTO utilisateur (nom,prenom,pseudo,email,password)
-                VALUES (:nom,:prenom,:pseudo,:email,:password)");
+                VALUES (?,?,?,?,?)");
 
-        $sql->bindParam(":nom",$nom);
-        $sql->bindParam(":prenom",$prenom);
-        $sql->bindParam(":pseudo",$pseudo);
-        $sql->bindParam(":email",$email);
-        $sql->bindParam(":password",$password);
-
-        $sql->execute();
+        $sql->execute([$_POST['name'], [$_POST['firtname'], [$_POST['pseudo'], [$_POST['email'],
+                      [$_POST['password']]);
+        session_id();
         header('location: ../index.php');
     }
     catch (PDOException$exception) {

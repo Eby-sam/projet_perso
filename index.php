@@ -32,6 +32,7 @@ include './_partials/head.php';
         <div class="part1" id="actu">
             <div class="titre">
                 <h2>ACTU</h2>
+                <p>bonjour je m'appel sam , hello world</p>
             </div>
 
         </div>
