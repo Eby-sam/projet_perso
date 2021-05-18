@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/52cbc63ebe.js" crossorigin="anonymous"></script>
     <title>EBY.DEV</title>
 </head>
 <body>
@@ -29,5 +30,6 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
         </div>
         <div id="sign">inscription</div>
         <div id="connect">connection</div>
+        <i class="fas fa-sign-out-alt"></i>
     </div>
 

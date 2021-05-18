@@ -1,3 +1,3 @@
 <?php
-    include '';
+    include '../_partials/head.php';
 ?>

@@ -6,8 +6,8 @@
             <div class="large">
                 <div class="formulaire">
                     <h1>Connexion</h1>
-                    <input type="email" name="email" id="id-email" placeholder="email">
-                    <input type="password" name="password" id="id-password" placeholder="Password">
+                    <input type="email" name="email" id="id-email" placeholder="email" required>
+                    <input type="password" name="password" id="id-password" placeholder="Password" required>
                     <input type="submit" class="envoi">
                 </div>
             </div>

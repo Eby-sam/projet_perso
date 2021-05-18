@@ -14,6 +14,7 @@ if(issetPostParams('name', 'firstname', 'pseudo', 'email', 'password')) {
      || empty($_POST['password'])) {
         return false;
     }
+
     try {
         $server = 'localhost';
         $db = 'projet_perso';
@@ -22,12 +23,14 @@ if(issetPostParams('name', 'firstname', 'pseudo', 'email', 'password')) {
 
         $bdd = new PDO("mysql:host=$server;dbname=$db;charset=utf8", $user, $pass);
 
-        $sql = $bdd->prepare("INSERT INTO utilisateur (nom,prenom,pseudo,email,password)
-                VALUES (?,?,?,?,?)");
+        $sql = $bdd->prepare("INSERT INTO user (name,firstname,pseudo,email,password)
+                VALUES ( ?, ?, ?, ?, ?)");
 
-        $sql->execute([$_POST['name'], [$_POST['firtname'], [$_POST['pseudo'], [$_POST['email'],
-                      [$_POST['password']]);
-        session_id();
+
+        $sql->execute([$_POST['name'], $_POST['firstname'],$_POST['pseudo'],
+                      $_POST['email'], $_POST['password']]);
+
+        session_start();
         header('location: ../index.php');
     }
     catch (PDOException$exception) {
@@ -38,7 +41,3 @@ else {
     header('location: ../inscription.php');
     echo "Les champs ne sont pas tous remplie";
 }
-
-
-
-
