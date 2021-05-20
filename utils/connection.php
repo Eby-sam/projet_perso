@@ -14,11 +14,13 @@ $pseudo=$_POST["pseudo"];
 $pass=($_POST["pass"]);
 $valider=$_POST["valider"];
 $erreur="";
+
 if(isset($valider)){
     include("connexion.php");
-    $sel = new PDO->prepare("select * from utilisateurs where pseudo=? and pass=? limit 1");
-    $sel->execute(array($pseudo,$pass));
-    $tab=$sel->fetchAll();
+    $con = new PDO->prepare("select * from user where email=? and password=? limit 1");
+    $con->execute(array($pseudo,$pass));
+    $tab=$con->fetchAll();
+
     if(count($tab)>0){
         $_SESSION["pseudo"]=ucfirst(strtolower($tab[0]["pseudo"])).
             " ".strtoupper($tab[0]["pseudo"]);

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://kit.fontawesome.com/52cbc63ebe.js" crossorigin="anonymous"></script>
-    <title>EBY.DEV</title>
+    <title>Creepy-Blog</title>
 </head>
 <body>
     <?php
@@ -30,6 +30,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
         </div>
         <div id="sign">inscription</div>
         <div id="connect">connection</div>
-        <i class="fas fa-sign-out-alt"></i>
+        <div><i class="fas fa-sign-out-alt"></i></div>
+        <div id="user"><i class="fas fa-user"></i></div>
     </div>
 

@@ -2,7 +2,8 @@
 let inscri = document.getElementById("sign");
 let home = document.getElementById("accueil");
 let connection = document.getElementById("connect");
-let bMenu = document.getElementById("menu")
+let bMenu = document.getElementById("menu");
+let bUser = document.getElementById("user");
 
 
 // les function \/
@@ -22,10 +23,15 @@ function menu() {
     document.location.href= "menu.php";
 }
 
+function user() {
+    document.location.href= "user.php";
+}
 
 
-// parti event \/
+
+// partie event \/
 inscri.addEventListener('click',redirect);
 home.addEventListener('click',retour);
 connection.addEventListener('click',connect);
 bMenu.addEventListener('click',menu);
+bUser.addEventListener('click',user);

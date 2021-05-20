@@ -92,6 +92,31 @@ body {
     color: gold;
 }
 
+#containerUser {
+    border: 3px solid red;
+    width: 95%;
+    margin: auto;
+}
+
+#banniereUser {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgUser {
+    width: 150px;
+    height: 150px;
+    background-image: url("../img/150x150.png");
+}
+
+#infoUser2 {
+    background: linear-gradient(black, red);
+    padding-bottom: 10px;
+}
+
 h1{
     color: red;
     font-size: 3.5rem;
