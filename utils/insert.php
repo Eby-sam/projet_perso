@@ -10,6 +10,7 @@ function issetPostParams(string ...$params): bool {
 }
 
 if(issetPostParams('name', 'firstname', 'pseudo', 'email', 'password')) {
+
     if(empty($_POST['name']) || empty($_POST['firstname']) || empty($_POST['pseudo']) ||  empty($_POST['email'])
      || empty($_POST['password'])) {
         return false;
@@ -23,14 +24,12 @@ if(issetPostParams('name', 'firstname', 'pseudo', 'email', 'password')) {
 
         $bdd = new PDO("mysql:host=$server;dbname=$db;charset=utf8", $user, $pass);
 
-        $sql = $bdd->prepare("INSERT INTO user (name,firstname,pseudo,email,password)
-                VALUES ( ?, ?, ?, ?, ?)");
+        $sql = $bdd->prepare("INSERT INTO user (name, firstname, pseudo, email, password, role_fk)
+                VALUES ( ?, ?, ?, ?, ?, 2)");
 
 
-        $sql->execute([$_POST['name'], $_POST['firstname'],$_POST['pseudo'],
+        $sql->execute([$_POST['name'], $_POST['firstname'], $_POST['pseudo'],
                       $_POST['email'], $_POST['password']]);
-
-        session_start();
         header('location: ../index.php');
     }
     catch (PDOException$exception) {
