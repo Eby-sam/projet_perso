@@ -1,5 +1,5 @@
 <?php
-
+session_start();
     function issetPostParams(string ...$params): bool {
         foreach ($params as $param){
             if(!isset($_POST[$param])) {
@@ -8,25 +8,39 @@
         }
         return true;
     }
+if(issetPostParams('email', 'password')) {
 
-session_start();
-$pseudo=$_POST["pseudo"];
-$pass=($_POST["pass"]);
-$valider=$_POST["valider"];
-$erreur="";
-
-if(isset($valider)){
-    include("connexion.php");
-    $con = new PDO->prepare("select * from user where email=? and password=? limit 1");
-    $con->execute(array($pseudo,$pass));
-    $tab=$con->fetchAll();
-
-    if(count($tab)>0){
-        $_SESSION["pseudo"]=ucfirst(strtolower($tab[0]["pseudo"])).
-            " ".strtoupper($tab[0]["pseudo"]);
-        $_SESSION["autoriser"]="oui";
-        header("location:session.php");
+    if (empty($_POST['email']) || empty($_POST['password'])) {
+        return false;
     }
-    else
-        $erreur="Mauvais pseudo ou mot de passe!";
+
+    try {
+        $server = 'localhost';
+        $db = 'projet_perso';
+        $user = 'root';
+        $pass = '';
+
+        $bdd = new PDO("mysql:host=$server;dbname=$db;charset=utf8", $user, $pass);
+
+        $sql = $bdd->prepare("SELECT * from user WHERE email = ?");
+
+        $sql->execute([$_POST['email']]);
+        $data = $sql->fetch();
+        if(password_verify($_POST['password'] , $data['password'])) {
+            $_SESSION['user']['email'] = $_POST['email'];
+            header('location: ../index.php');
+        }
+
+
+
+    }
+
+    catch (PDOException$exception) {
+        echo $exception->getMessage();
+    }
+}
+
+else {
+    header('location: ../connect.php');
+    echo "Les champs ne sont pas tous remplie";
 }

@@ -29,8 +29,12 @@ if(issetPostParams('name', 'firstname', 'pseudo', 'email', 'password')) {
 
 
         $sql->execute([$_POST['name'], $_POST['firstname'], $_POST['pseudo'],
-                      $_POST['email'], $_POST['password']]);
+                      $_POST['email'], password_hash($_POST['password'], PASSWORD_DEFAULT)]);
+        $data = $sql->fetch();
+
+        $_SESSION['user']['email'] = $_POST['email'];
         header('location: ../index.php');
+
     }
     catch (PDOException$exception) {
         echo $exception->getMessage();

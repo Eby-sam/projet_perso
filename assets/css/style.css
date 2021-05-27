@@ -21,81 +21,51 @@ body {
     color: white;
     justify-content: space-around;
     align-items: center;
-
 }
 
-#connect {
-    background-color: white;
-    color: #000000;
-    border-radius: 3px;
-    width: 125px;
-    height: 80%;
+#listeBanniere {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
-
-#connect:hover {
-    background-color: #090909;
-    color: gold;
-}
-
-#sign {
-    background-color: white;
-    color: black;
-    border-radius: 3px;
-    width: 125px;
-    height: 80%;
+li {
+    width: 6%;
+    padding: 10px 10px;
+    background-color: black;
+    list-style-type: none;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    border-radius: 50%;
+
 }
 
-#sign:hover {
-    background-color: #090909;
-    color: gold;
-}
-
-#menu {
+li:hover {
     background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+    font-family: "Ink Free";
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+a:hover {
     color: black;
-    border-radius: 3px;
-    width: 125px;
-    height: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
-#menu:hover {
-    background-color: #090909;
-    color: gold;
-}
 
-#accueil {
-    background-color: #ffffff;
-    color: black;
-    border-radius: 3px;
-    width: 125px;
-    height: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-#accueil:hover {
-    background-color: #090909;
-    color: gold;
-}
 
 #containerUser {
-    border: 3px solid red;
+    border: 3px solid #b70505;
     width: 95%;
     margin: auto;
+    border-radius: 10px;
 }
 
 #banniereUser {
@@ -111,10 +81,17 @@ body {
     height: 150px;
     background-image: url("../img/150x150.png");
 }
-
-#infoUser2 {
+#fondInfo {
     background: linear-gradient(black, red);
     padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#infoUser2 {
+    margin-left: 25px;
+    width: 70%;
 }
 
 h1{
@@ -133,11 +110,6 @@ h1{
     font-weight: bold;
 }
 
-h2 {
-    color: gold;
-    text-align: center;
-    font-size: 3.5rem;
-}
 
 #div-titre {
     width: 100%;
@@ -205,19 +177,38 @@ p {
     text-align: left;
 }
 
-#etat {
-    color: dodgerblue;
-}
-
-#click_div {
-    width: 50%;
-    height: 500px;
+#clickListe {
+    width: 60%;
+    height: 600px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+.listMenu {
+    width: 40%;
+    height: 40%;
+    border : 1px solid red;
+}
+
+.listMenu:hover {
+    background-image: url("../img/sang1.jpg");
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.listMenu  a {
+    list-style-type: none;
+    font-size: 35px;
+    font-family: "Ink Free";
+    font-style: italic;
+    font-weight: bold;
+}
+
+
 
 .div_button {
     width: 35%;
@@ -233,12 +224,6 @@ p {
     font-family: "Ink Free";
     font-style: italic;
     font-weight: bold;
-}
-
-.div_button:hover {
-    border-color: black;
-    color: black;
-    background-image: url("../img/sang1.jpg");
 }
 
 #div_info {
@@ -259,7 +244,7 @@ p {
 }
 
 h3 {
-    color: gold;
+    color: #ff0000;
     font-size: 2.5rem;
 }
 
@@ -293,6 +278,7 @@ h3 {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
 }
 
 .containerInscript {
@@ -303,6 +289,7 @@ h3 {
 
 .containerConnect {
     justify-content: flex-start;
+    margin-right: 50px;
     background-image: url("../img/sombre1.png");
 }
 
@@ -319,6 +306,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-right: 50px;
 }
 
 .envoi {
@@ -390,4 +378,67 @@ h6 {
     font-weight: bold;
     font-style: italic;
     font-family: "Ink Free";
+}
+
+#blockArt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#containerArt {
+    width: 90%;
+    height: 100px;
+    background-color: lime;
+    margin: auto;
+    float: left;
+    padding-top: -15px;
+}
+
+#containerVideo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #ff0000;
+    font-family: "Ink Free";
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+#creatVideo {
+    width: 75%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #b70505;
+    color: black;
+    font-size: 35px;
+}
+
+#containerCreatVideo {
+    flex-direction: column;
+    color: #b70505;
+    background-color: grey;
+    width: 70%;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#enter1 {
+    width: 120px;
+    height: 50px;
+    color: #b70505;
+    background-color: black;
+    font-family: "Ink Free";
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+
 }

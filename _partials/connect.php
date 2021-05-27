@@ -1,7 +1,7 @@
 <?php
-    include './_partials/head.php';
+    include 'head.php';
 ?>
-    <form method="post" action="utils/connection.php">
+    <form method="post" action="../utils/connection.php">
         <div class="containerConnect container">
             <div class="large">
                 <div class="formulaire">
@@ -14,5 +14,5 @@
         </div>
 
 <?php
-    include './_partials/footer.php';
+    include 'footer.php';
 ?>

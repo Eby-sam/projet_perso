@@ -1,7 +1,7 @@
 <?php
-    include '_partials/head.php';
+    include 'head.php';
 ?>
-    <form method="post" action="utils/insert.php">
+    <form method="post" action="/utils/insert.php">
         <div id="container2" class="containerInscript container">
             <div class="large">
                 <div class="formulaire">
@@ -18,5 +18,5 @@
     </form>
 
 <?php
-    include './_partials/footer.php';
+    include 'footer.php';
 ?>

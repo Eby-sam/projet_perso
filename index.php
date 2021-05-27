@@ -1,5 +1,5 @@
 <?php
-include '_partials/head.php';
+    include '_partials/head.php';
 ?>
     <header>
         <?php
@@ -62,6 +62,6 @@ include '_partials/head.php';
 
 
 <?php
-include './_partials/footer.php';
+    include './_partials/footer.php';
 ?>
 

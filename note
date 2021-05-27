@@ -3,19 +3,14 @@
 <i class="fas fa-folder"></i>                 // dossier
 <i class="fas fa-user"></i>                   // user
 <i class="far fa-comment-dots"></i>           // chat
-<i class="fas fa-times"></i>                  //  X
+<i class="fas fa-times"></i>                  //  sortir/deco...
+<i class="fas fa-dice"><h6>Games</h6></i>     // jeux
+<i class="fas fa-external-link-alt"><h6>Article</h6></i> // article
+<i class="fas fa-play"><h6>Vidéo</h6></i>     // video
+<i class="fas fa-folder"><h6>Galerie</h6></i>  // galerie
 
 
-
-
-
-
-
-
-
-
-
-requete preparé  -> évite les injection sql ,
+-------------------requete preparé  -> évite les injection sql ,------------------------------------------------------------------
 
 class cleanInput {
     // nettoyage des inputs
@@ -54,4 +49,19 @@ class cleanInput {
     }
 
 
-vwr49qvhmsqcft54q3ksw3
+-----------autre---------------------------------------------------------------------------------------
+#listeBanniere {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+li {
+    width: 6%;
+    padding: 10px;
+    background-color: black;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
