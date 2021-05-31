@@ -23,10 +23,10 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
     <div id="banniere">
        <ul id="listeBanniere">
            <li><a href="/index.php">acceuil</a></li>
-           <li><a href="/_partials/menu.php">menu</a></li>
-           <li><a href="/_partials/inscription.php">inscription</a></li>
-           <li><a href="/_partials/connect.php">connection</a></li>
-           <li><a href="user.php"><i class="fas fa-user"> user</i></a></li>
+           <li><a href="/View/_partials/menu.php">menu</a></li>
+           <li><a href="/View/_partials/inscription.php">inscription</a></li>
+           <li><a href="/View/_partials/connect.php">connection</a></li>
+           <li><a href="/View/_partials/user.php"><i class="fas fa-user"> user</i></a></li>
        </ul>
     </div>
 

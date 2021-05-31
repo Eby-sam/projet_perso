@@ -1,7 +1,7 @@
 <?php
     include 'head.php';
 ?>
-    <form method="post" action="../utils/connection.php">
+    <form method="post" action="../../utils/connection.php">
         <div class="containerConnect container">
             <div class="large">
                 <div class="formulaire">
