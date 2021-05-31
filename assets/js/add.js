@@ -1,3 +1,5 @@
+// video view         ---------------------------------
+
 let creatV = document.getElementById('creatVideo');
 let contCreatV = document.getElementById('containerCreatVideo');
 
