@@ -16,7 +16,7 @@
                     <h2>Actualité</h2>
                 </div>
                 <div id="article">
-                    <p>bonjour je m'appel sam , hello world ceci est un test de longueur et de hauteur de la capacité du texte
+                    <p>bonjour je m'appel Eby , hello world ceci est un test de longueur et de hauteur de la capacité du texte
                         dans ce div rouge sang !!!</p>
                     <p>test</p>
                     <p>test</p>
