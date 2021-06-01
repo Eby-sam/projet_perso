@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -16,7 +20,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
     echo 'Bonjour ' . $_SESSION['pseudo'];
 } ?>
 
-    <div id="div-titre">
+    <div id="div-title">
         <h1 id="title">CREEPY-BLOG</h1>
     </div>
 
@@ -24,9 +28,22 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
        <ul id="listeBanniere">
            <li><a href="/index.php">acceuil</a></li>
            <li><a href="/View/_partials/menu.php">menu</a></li>
-           <li><a href="/View/_partials/inscription.php">inscription</a></li>
-           <li><a href="/View/_partials/connect.php">connection</a></li>
-           <li><a href="/View/_partials/user.php"><i class="fas fa-user"> user</i></a></li>
+
+           <?php
+            if(isset($_SESSION['user'])) { ?>
+                <li><a href="/View/_partials/user.php"><i class="fas fa-user"> user</i></a></li>
+                <li><a href="/utils/deconnexion.php"><i class="fas fa-sign-out-alt"></i></a></li>
+            <?php }
+
+            else { ?>
+                <li><a href="/View/_partials/inscription.php">inscription</a></li>
+                <li><a href="/View/_partials/connect.php">connection</a></li>
+            <?php } ?>
+
+
+
+
+
        </ul>
     </div>
 

@@ -1,19 +1,29 @@
 <?php
-
 namespace MinichatProjet\Entity;
 
 class user {
-
+    private string $name;
+    private string $firstname;
+    private string $pseudo;
+    private string $email;
+    private string $password;
+    private int $role_fk;
+    private bool $activate;
     private ?int $id;
-    private ?string $name;
-    private ?string $firstname;
-    private ?string $pseudo;
-    private ?string $email;
-    private ?string $password;
-    private ?int $role_fk;
 
-    public function __construct(int $id, string $firstname, string $name, string $pseudo, string $email,
-                                string $password, int $role_fk) {
+    /**
+     * user constructor.
+     * @param string $name
+     * @param string $firstname
+     * @param string $pseudo
+     * @param string $email
+     * @param string $password
+     * @param int $role_fk
+     * @param bool $activate
+     * @param int|null $id
+     */
+    public function __construct(string $name, string $firstname, string $pseudo, string $email, string $password, int $role_fk, bool $activate, int $id = null)
+    {
         $this->id = $id;
         $this->name = $name;
         $this->firstname = $firstname;
@@ -21,52 +31,117 @@ class user {
         $this->email = $email;
         $this->password = $password;
         $this->role_fk = $role_fk;
+        $this->activate = $activate;
     }
 
     /**
-     * @return string|null
+     * @return bool
      */
-    public function getName(): ?string
+    public function getActivate(): bool
+    {
+        return $this->activate;
+    }
+
+    /**
+     * @param bool $activate
+     */
+    public function setActivate(bool $activate): void
+    {
+        $this->activate = $activate;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param string|null $name
+     * @param string $name
      */
-    public function setName(?string $name): void
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getFirstname(): ?string
+    public function getFirstname(): string
     {
         return $this->firstname;
     }
 
     /**
-     * @param string|null $firstname
+     * @param string $firstname
      */
-    public function setFirstname(?string $firstname): void
+    public function setFirstname(string $firstname): void
     {
         $this->firstname = $firstname;
     }
 
     /**
-     * @return int|null
+     * @return string
      */
-    public function getRoleFk(): ?int
+    public function getPseudo(): string
+    {
+        return $this->pseudo;
+    }
+
+    /**
+     * @param string $pseudo
+     */
+    public function setPseudo(string $pseudo): void
+    {
+        $this->pseudo = $pseudo;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword(string $password): void
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRoleFk(): int
     {
         return $this->role_fk;
     }
 
     /**
-     * @param int|null $role_fk
+     * @param int $role_fk
      */
-    public function setRoleFk(?int $role_fk): void
+    public function setRoleFk(int $role_fk): void
     {
         $this->role_fk = $role_fk;
     }
@@ -74,56 +149,16 @@ class user {
     /**
      * @return int|null
      */
-    public function getId(): int {
+    public function getId(): ?int
+    {
         return $this->id;
     }
 
     /**
      * @param int|null $id
      */
-    public function setId(?int $id): void {
+    public function setId(?int $id): void
+    {
         $this->id = $id;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getPseudo(): string {
-        return $this->pseudo;
-    }
-
-    /**
-     * @param string|null $pseudo
-     */
-    public function setPseudo(?string $pseudo): void {
-        $this->pseudo = $pseudo;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getEmail(): string {
-        return $this->email;
-    }
-
-    /**
-     * @param string|null $email
-     */
-    public function setEmail(?string $email): void {
-        $this->email = $email;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getPassword(): string {
-        return $this->password;
-    }
-
-    /**
-     * @param string|null $password
-     */
-    public function setPassword(?string $password): void {
-        $this->password = $password;
     }
 }

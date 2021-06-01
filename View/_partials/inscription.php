@@ -1,5 +1,6 @@
 <?php
     include 'head.php';
+    session_start();
 ?>
     <form method="post" action="/utils/insert.php">
         <div id="container2" class="containerInscript container">

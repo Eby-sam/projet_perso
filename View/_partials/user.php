@@ -1,6 +1,5 @@
 <?php
     include 'head.php';
-
     session_start();
     if(!isset($_SESSION["user"]["email"])){
         header('Location: connect.php');
@@ -20,11 +19,8 @@
                         <p>Pseudo :</p>
                         <p>Email :</p>
                         <p>Role :</p>
-                        <button id="disconnect">Deconnection</button>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>

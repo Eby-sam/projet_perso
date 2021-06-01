@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if($_SESSION["autoriser"]!="oui"){
-        header("location:login.php");
+    if($_SESSION["accepted"]!=true){
+        header("Location:login.php");
         exit();
     }
     if(date("H")<18)
