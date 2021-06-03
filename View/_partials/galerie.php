@@ -1,5 +1,6 @@
 <?php
     include 'head.php';
+    require $_SERVER['DOCUMENT_ROOT'] . '/View/_partials/pic/uploadImage.php';
 ?>
 <h5> Galerie d'image </h5>
 
@@ -10,7 +11,11 @@
         <div><input type="submit" class="btn fichier" value="envoyer" /></div>
         <input type="hidden" value="b" name="env"/>
     </form>
-    <div id="lookImg"></div>
+    <div id="lookImg">
+        <?php
+
+        ?>
+    </div>
 </div>
 
 

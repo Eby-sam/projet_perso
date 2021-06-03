@@ -24,7 +24,7 @@ class userM
         $user_data = $request->fetch();
 
         return new user($user_data['name'], $user_data['firstname'],
-             $user_data['pseudo'], $user_data['email'], $user_data['password'], $user_data['role_fk']);
+             $user_data['pseudo'], $user_data['email'], $user_data['password'], $user_data['role_fk'], $user_data['activate']);
     }
 
     /**
@@ -50,6 +50,11 @@ class userM
 
     /**
      *  add a new user.
+     * @param $name
+     * @param $firstname
+     * @param $pseudo
+     * @param $email
+     * @param $password
      */
 
     public function addUser($name, $firstname, $pseudo, $email, $password) {
@@ -72,7 +77,8 @@ class userM
         $message = 'bienvenue sur le Creepy Blog !
                     <br>
                     Le lien d\'activation est : <a href="sam.up-to.fr/utils/validateRegistration.php?email='.$email.'&token='.$token.'">Lien</a>';
+        $headers = "MIME-Version: 1.0"."\r\n";
         $message = wordwrap($message, 70,"\r\n");
-        mail($to, $sujet, $message);
+        mail($to, $sujet, $message, $headers);
     }
 }
