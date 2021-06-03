@@ -1,30 +1,18 @@
 <?php
     include 'head.php';
-    if(isset($_POST["env"])){
-        $logo=$_FILES['photo']['name'];
-
-        if($logo!=""){
-            require "uploadImage.php";
-            if($sortie==false){$logo=$dest_dossier . $dest_fichier;}
-            else {$logo="notdid";}
-        }
-        if($logo!="notdid"){
-            echo "upload reussi!!!";
-
-        }
-        else{
-            echo"recommence!!!";
-        }
-    }
 ?>
+<h5> Galerie d'image </h5>
 
-    <form method="POST" action="/utils/uploadimage.php">
-
-        <div><h5> Ins&eacute;rer une image </h5> <input type="file" name="photo" id="photo" /></div>
-
-        <div><input type="submit" class="btn" value="envoyer" /></div>
+<div id="galerieForm">
+    <form method="POST" action="pic/uploadImage.php" enctype="multipart/form-data">
+        <input type="text" name="imgName" placeholder="nom de l'image" class="fichier">
+        <input type="file" name="img" id="img" class="fichier" />&nbsp;( Max : 8Mo)<br>
+        <div><input type="submit" class="btn fichier" value="envoyer" /></div>
         <input type="hidden" value="b" name="env"/>
     </form>
+    <div id="lookImg"></div>
+</div>
+
 
 <?php
      include 'footer.php';

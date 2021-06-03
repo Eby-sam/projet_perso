@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color : #000000;
+    background-color :white;
 
 }
 
@@ -455,4 +455,32 @@ h2 {
     font-style: italic;
     font-weight: bold;
     font-size: 30px;
+}
+
+h5 {
+    color: red;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Ink Free";
+}
+
+#galerieForm {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    color: red;
+}
+
+#lookImg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.fichier {
+    width: 20%;
 }

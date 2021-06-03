@@ -5,10 +5,10 @@ use PDO;
 use PDOException;
 class DB {
 
-    private string $server = 'starcomputer.fr';
-    private string $db = 'u548041276_dbSam';
-    private string $user = 'u548041276_sam';
-    private string $pwd = 'Naruto190';
+    private string $server = 'localhost';
+    private string $db = 'projet_perso';
+    private string $user = 'root';
+    private string $pwd = '';
 
     private static ?PDO $database = null;
 
