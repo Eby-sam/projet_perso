@@ -9,5 +9,5 @@ if(isset($_GET['email'], $_GET['token'])){
     $request->bindValue(':token', $_GET['token']);
     $request->execute();
 
-    header("Location: /index.php");
+    header("Location: ../index.php");
 }

@@ -21,12 +21,11 @@ if((new checkIsset)->issetPostParams('email', 'password')) {
         header('location: ../index.php');
     }
     else  {
-        $_SESSION['message'] = "le mot de passe est incorrecte !";
-        header('location: ../View/_partials/connect.php');
-
+        $_SESSION['message'] = "le mot de passe est incorrect !";
+        header('location: ../Pages/connect.php');
     }
 }
 
 else {
-    header('location: ../connect.php');
+    header('location: ../Pages/connect.php');
 }

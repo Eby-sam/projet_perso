@@ -1,7 +1,7 @@
 <?php
 namespace MinichatProjet\Entity;
 
-class pic {
+class Pic {
 
     private string $img;
     private ?int $id;

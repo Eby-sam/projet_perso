@@ -1,10 +1,9 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Classes/DB.php';
-require_once $_SERVER["DOCUMENT_ROOT"] . '/Modele/Entity/pic.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/Modele/Entity/Pic.php';
 
 use MinichatProjet\Classes\DB;
-
 
 
 /**
@@ -23,6 +22,7 @@ function getRandomName(String $nameRan): string {
     return bin2hex($bytes) . '.' . $infos['extension'];
 }
 
+
 if (isset($_FILES["img"]) && $_FILES["img"]["error"] === 0) {
 
     $allowedMimeType = ['text/plain', 'image/jpeg', 'image/jpg', 'image/png'];
@@ -40,7 +40,7 @@ if (isset($_FILES["img"]) && $_FILES["img"]["error"] === 0) {
             $request->bindValue(':img',$name);
             $request->execute();
 
-            header('location: ../galerie.php');
+            header('location: ../Pages/galerie.php');
 
 
         }

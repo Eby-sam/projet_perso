@@ -2,5 +2,5 @@
 
   session_start();
   session_destroy();
-  header("location: ../View/_partials/connect.php");
+  header("location: ../Pages/connect.php");
 

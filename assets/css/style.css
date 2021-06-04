@@ -406,6 +406,7 @@ h6 {
     border-radius: 10px;
     padding : 15px;
 
+
 }
 
 .artTitle {
@@ -416,6 +417,7 @@ h6 {
     align-items: center;
     border-bottom: 1px solid darkred;
 }
+
 h4 {
     font-family: "Ink Free";
 }
@@ -508,7 +510,7 @@ h5 {
 }
 
 .small-img {
-    max-width:100%;
+    width:100%;
     max-height: 100%;
     padding: 5px;
     background-size: contain;
@@ -536,6 +538,7 @@ h5 {
     justify-content: center;
     align-items: center;
 }
+
 #formArt {
     display: flex;
     flex-direction: column;
@@ -562,4 +565,11 @@ h5 {
 #textArt {
     width: 80%;
     height: 10rem;
+}
+
+.artAticle {
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 15px;
 }

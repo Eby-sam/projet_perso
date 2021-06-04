@@ -3,13 +3,13 @@
 namespace MiniChat\Manager;
 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/Classes/DB.php';
-require_once $_SERVER["DOCUMENT_ROOT"] . '/Modele/Entity/user.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/Modele/Entity/User.php';
 use MinichatProjet\Classes\DB;
 use MinichatProjet\Entity\user;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/utils/checkIsset.php';
 
-class userM
+class userManager
 {
     /**
      * Return a user based on id.
@@ -46,7 +46,6 @@ class userM
         }
         return $users;
     }
-
 
     /**
      *  add a new user.

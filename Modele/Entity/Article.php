@@ -2,14 +2,14 @@
 
 namespace MinichatProjet\Entity;
 
-class article {
+class Article {
 
     private string $title;
     private string $content;
-    private string $user_fk;
+    private int $user_fk;
     private ?int $id;
 
-    public function __construct(string $title, string $content, string $user_fk, int $id = null) {
+    public function __construct(string $title, string $content, int $user_fk, int $id = null) {
         $this->title = $title;
         $this->content = $content;
         $this->user_fk = $user_fk;
@@ -51,7 +51,7 @@ class article {
     /**
      * @return string
      */
-    public function getUser_fk(): string
+    public function getUser_fk(): int
     {
         return $this->user_fk;
     }
@@ -59,7 +59,7 @@ class article {
     /**
      * @param string $user_fk
      */
-    public function setUser_fk(string $user_fk): void
+    public function setUser_fk(int $user_fk): void
     {
         $this->user_fk = $user_fk;
     }

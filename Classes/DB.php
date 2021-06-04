@@ -36,4 +36,18 @@ class DB {
         }
         return self::$database;
     }
+
+    /**
+     * Cleanup data before database insert.
+     * @param string $data
+     * @param bool $tags
+     * @return string
+     */
+    public static function cleanupData(string $data, $tags=true): string {
+        $string = addslashes($data);
+        if($tags) {
+            $string = strip_tags($string);
+        }
+        return $string;
+    }
 }

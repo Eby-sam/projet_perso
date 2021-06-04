@@ -13,8 +13,8 @@ session_start();
     <script src="https://kit.fontawesome.com/52cbc63ebe.js" crossorigin="anonymous"></script>
     <title>Creepy-Blog</title>
 </head>
-<body>
-    <?php
+<body> <?php
+
 if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
 {
     echo 'Bonjour ' . $_SESSION['pseudo'];
@@ -27,23 +27,25 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
     <div id="banniere">
        <ul id="listeBanniere">
            <li><a href="/index.php">acceuil</a></li>
-           <li><a href="/View/_partials/menu.php">menu</a></li>
+           <li><a href="/Pages/menu.php">menu</a></li>
 
            <?php
             if(isset($_SESSION['user'])) { ?>
-                <li><a href="/View/_partials/user.php"><i class="fas fa-user"> user</i></a></li>
-                <li><a href="/utils/deconnexion.php"><i class="fas fa-sign-out-alt"></i></a></li>
-            <?php }
-
+                <li>
+                    <a href="/Pages/user.php"><i class="fas fa-user"> user</i></a>
+                </li>
+                <li>
+                    <a href="/utils/deconnexion.php"><i class="fas fa-sign-out-alt"></i></a>
+                </li> <?php
+            }
             else { ?>
-                <li><a href="/View/_partials/inscription.php">inscription</a></li>
-                <li><a href="/View/_partials/connect.php">connection</a></li>
-            <?php } ?>
-
-
-
-
-
+                <li>
+                    <a href="/Pages/inscription.php">inscription</a>
+                </li>
+                <li>
+                    <a href="/Pages/connect.php">connection</a>
+                </li> <?php
+            } ?>
        </ul>
     </div>
 

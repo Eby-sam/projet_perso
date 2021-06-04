@@ -1,14 +1,13 @@
 <?php
-    include 'head.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Classes/DB.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/View/_partials/pic/uploadImage.php';
     use MinichatProjet\Classes\DB;
 ?>
 
 <h5> Galerie d'image </h5>
 
 <div id="galerieForm">
-    <form method="POST" action="pic/uploadImage.php" enctype="multipart/form-data" class="formFile">
+    <form method="POST" action="../utils/uploadImage.php" enctype="multipart/form-data" class="formFile">
         <input type="text" name="imgName" placeholder="nom de l'image" class="fichier"><br>
         <input type="file" name="img" id="img" class="fichier" />&nbsp;( Max : 8Mo)<br>
         <div><input type="submit" class="btn fichier" value="envoyer" /></div>
@@ -20,7 +19,7 @@
             $request->execute();
             $images = $request->fetchAll();
             foreach ($images as $image){
-                $src = '/View/_partials/pic/' . $image['img'];
+                $src = '/Pages/upload/images/' . $image['img'];
                // if(file_exists($src)){?>
 
                     <div class="fileDiv">
@@ -29,7 +28,6 @@
 
                // }
             }
-
         ?>
     </div>
 </div>
