@@ -1,5 +1,7 @@
 <?php
     include 'head.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/articleM.php';
+    use MiniChat\Manager\articleM;
 ?>
 <h2>Article</h2>
 
@@ -33,9 +35,6 @@
                     voluptas?
                 </p>
             </div>
-            <?php
-
-            ?>
         </div>
         <div class="containerform">
             <form action="/Modele/Manager/articleM.php" method="post" id="formArt">
@@ -51,14 +50,8 @@
                 <div class="divArea">
                     <input type="submit" class="inputArt">
                 </div>
-
-
-
-
             </form>
         </div>
-
-
     </div>
 
 

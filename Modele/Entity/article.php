@@ -61,7 +61,7 @@ class article {
      */
     public function setUser_fk(string $user_fk): void
     {
-        $this->pseudo = $user_fk;
+        $this->user_fk = $user_fk;
     }
 
     /**
