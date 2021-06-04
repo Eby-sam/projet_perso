@@ -49,7 +49,7 @@ if (isset($_FILES["img"]) && $_FILES["img"]["error"] === 0) {
         }
     }
     else {
-        echo 'une erreur est survenue :o';
+        echo 'mauvais type de pic';
     }
 }
 

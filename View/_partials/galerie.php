@@ -19,16 +19,16 @@ use MinichatProjet\Entity\pic;
         <?php
             $request = DB::connectDB()->prepare("SELECT * FROM pic");
             $request->execute();
-
             $images = $request->fetchAll();
             foreach ($images as $image){
                 $src = '/View/_partials/pic/' . $image['img'];
-                //if(file_exists($src)){?>
+               // if(file_exists($src)){?>
+
                     <div class="fileDiv">
                         <img class="small-img" alt="<?= $image['img'] ?>" src="<?= $src ?>">
                     </div><?php
 
-                //}
+               // }
             }
 
         ?>
