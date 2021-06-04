@@ -3,9 +3,8 @@
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Classes/DB.php';
     require_once $_SERVER['DOCUMENT_ROOT'] . '/View/_partials/pic/uploadImage.php';
     use MinichatProjet\Classes\DB;
-use MinichatProjet\Entity\pic;
-
 ?>
+
 <h5> Galerie d'image </h5>
 
 <div id="galerieForm">

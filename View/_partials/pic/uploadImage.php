@@ -25,10 +25,10 @@ function getRandomName(String $nameRan): string {
 
 if (isset($_FILES["img"]) && $_FILES["img"]["error"] === 0) {
 
-    $allowedMimeType = ['text/plain', 'image/jpeg', 'image/jpg'];
+    $allowedMimeType = ['text/plain', 'image/jpeg', 'image/jpg', 'image/png'];
     if(in_array($_FILES['img']['type'], $allowedMimeType)) {
 
-        $maxSize = 8 * 4096 * 4096; // = 8 mo
+        $maxSize = 8 * 4096 * 4096;   // = 8 mo max
         if((int)$_FILES['img']['size'] <= $maxSize) {
 
             $tmp_name = $_FILES['img']["tmp_name"];

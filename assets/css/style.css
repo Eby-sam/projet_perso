@@ -389,14 +389,23 @@ h6 {
 }
 
 .containerArt {
-    width: 60%;
-    border: 1px solid red;
-    border-radius: 10px;
+    width: 90%;
     color: red;
     margin-left: 30px;
     float: left;
     padding-top: -15px;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.containerArticle {
+    width: 60%;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding : 15px;
+
 }
 
 .artTitle {
@@ -504,7 +513,6 @@ h5 {
     padding: 5px;
     background-size: contain;
     background-repeat: no-repeat;
-
 }
 
 .fileDiv {
@@ -517,4 +525,41 @@ h5 {
     align-items: center;
     border-radius: 5px;
     margin: 6px;
+}
+
+.containerform {
+    width: 25%;
+    height: 25rem;
+    border: 1px solid red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#formArt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+    height: 90%;
+    width: 80%;
+}
+
+.divArea {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputArt {
+    width: 80%;
+    height: 2rem;
+}
+
+#textArt {
+    width: 80%;
+    height: 10rem;
 }
