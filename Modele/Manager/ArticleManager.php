@@ -23,6 +23,7 @@ class ArticleManager {
         $request->bindValue(':content', DB::cleanupData($content, false));
         $request->bindValue(':user_fk', $user_fk);
 
+
         return $request->execute() && DB::connectDB()->lastInsertId() > 0;
     }
 

@@ -3,7 +3,6 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . '/utils/checkIsset.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . '/Classes/DB.php';
 
-
 use MiniChatProjet\Classes\DB;
 
 session_start();

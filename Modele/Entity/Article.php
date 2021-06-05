@@ -21,7 +21,7 @@ class Article {
      */
     public function getTitle(): string
     {
-        return $this->title;
+        return str_replace('\\','',$this->title);
     }
 
     /**
@@ -37,7 +37,7 @@ class Article {
      */
     public function getContent(): string
     {
-        return $this->content;
+        return str_replace('\\','', $this->content);
     }
 
     /**

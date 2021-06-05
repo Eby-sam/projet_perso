@@ -2,6 +2,7 @@
 
 use MiniChat\Manager\userManager;
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/RoleManager.php';
 
 include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
     session_start();
@@ -19,14 +20,24 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
             <div id="fondInfo">
                 <div id="infoUser2">
                     <?php
-                    $user = new userManager();
-                    $userData = $user->getUser(1);
+                        $user = new userManager();
+                        $role = new RoleManager();
+                        $userData = $user->getUser($_SESSION['id']);
                     ?>
-                    <p>Nom : <?= $userData->getName() ?></p>
-                    <p>Prenom : <?= $userData->getFirstname() ?></p>
-                    <p>Pseudo : <?= $userData->getPseudo() ?></p>
-                    <p>Email : <?= $userData->getEmail() ?></p>
-                    <p>Role : <?= $userData->getRoleFk() ?></p>
+                    <p>Nom :
+                        <?= $userData->getName() ?>
+                    </p>
+                    <p>Prenom :
+                        <?= $userData->getFirstname() ?>
+                    </p>
+                    <p>Pseudo : <?= $userData->getPseudo() ?>
+                    </p>
+                    <p>Email :
+                        <?= $userData->getEmail() ?>
+                    </p>
+                    <p>Role :
+                        <?= $userData->getRoleFk() ?>
+                    </p>
                 </div>
             </div>
         </div>

@@ -63,18 +63,21 @@ a:hover {
 
 
 #containerUser {
-    border: 3px solid #b70505;
     width: 95%;
     margin: auto;
     border-radius: 10px;
 }
 
 #banniereUser {
+    background-color: #928d8d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 100%;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 
 #imgUser {
@@ -83,16 +86,29 @@ a:hover {
     background-image: url("../img/150x150.png");
 }
 #fondInfo {
-    background: linear-gradient(black, red);
+
     padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+#infoUser {
+    background-color: #928d8d;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: black;
+}
+
 #infoUser2 {
     margin-left: 25px;
     width: 70%;
+    color: black;
+}
+
+#infoUser2 p {
+    color: black;
+    border: none;
 }
 
 h1{
@@ -173,7 +189,7 @@ h1{
 }
 
 p {
-    color: gold;
+    color: white;
     font-size: 1.4rem;
     text-align: left;
     border-bottom: 1px solid #5b4f4f;
@@ -391,24 +407,24 @@ h6 {
 .containerArt {
     width: 90%;
     color: red;
-    margin-left: 30px;
+    margin-left: 50px;
     float: left;
     padding-top: -15px;
     margin-bottom: 15px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .containerArticle {
     background: linear-gradient(black, #840101);
-    width: 60%;
-    border: 1px solid red;
+    width: 90%;
+    border: 1px solid  #840101;
     border-radius: 10px;
     padding : 15px;
-
-
-}
+    margin-left: auto;
+    margin-right: auto;
+    }
 
 .artTitle {
     width: 100%;
@@ -420,7 +436,7 @@ h6 {
 }
 
 h4 {
-    color: gold;
+    color: #920101;
     font-family: "Ink Free";
 }
 
@@ -451,7 +467,7 @@ h2 {
 #containerCreatVideo {
     flex-direction: column;
     color: #b70505;
-    background-color: grey;
+    background-color: black;
     width: 70%;
     font-size: 25px;
     justify-content: center;
@@ -526,52 +542,79 @@ h5 {
 }
 
 .containerform {
-    width: 25%;
-    height: 25rem;
+    width: 90%;
     border: 1px solid red;
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
+
 }
 
 #formArt {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid red;
-    height: 90%;
-    width: 80%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#contForm {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .divArea {
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .inputArt {
-    width: 80%;
+    width: 100%;
     height: 2rem;
 }
 
 #textArt {
-    width: 80%;
-    height: 10rem;
+    width: 100%;
+    height: 13rem;
 }
 
 .artAticle {
-    border: 1px solid red;
+    border: 1px solid #b70505;
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 15px;
+    border-bottom: 1px solid #5b4f4f;
+    background-color: #cdcaca;
+}
+
+
+.artAticle h3 {
+    color: black;
+    font-size: 26px;
 }
 
 .story {
     height: 150px;
     overflow: hidden;
     font-size: 18px;
+    border-bottom: 1px solid ;
+    border-color: #840101;
+    color: black;
+}
+
+#addAppears {
+    width: 100%;
+    height: 60px;
+    background-color: #990202;
+    font-family: "Ink Free";
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 10px;
 }

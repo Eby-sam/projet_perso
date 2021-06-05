@@ -9,9 +9,28 @@
 
 
 ?>
-<h2>Articles</h2>
+<h2>CreepyPasta</h2>
 
 <div class="containerArt">
+    <div class="containerForm">
+        <button id="addAppears">ajouté une CreepyPasta</button>
+        <div id="contForm">
+            <form action="/utils/insertArticle.php" method="post" id="formArt">
+                <div class="divArea">
+                    <input type="text" name="title" class="inputArt" placeholder="titre" required>
+                </div>
+                <div class="divArea">
+                    <textarea id="textArt" name="content" placeholder="story" required></textarea>
+                </div>
+                <div class="divArea">
+                    <input type="submit" class="inputArt">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
     <div class="containerArticle">
     <?php
     $articleManager = new ArticleManager();
@@ -25,28 +44,16 @@
                 <h3><?= $article->getTitle() ?></h3>
             </div>
             <p class="story">
-               <?= $article->getContent() ?>
+               <?= nl2br($article->getContent()) ?>
             </p>
-            <h4>mise en ligne: <?= $author->getPseudo() ?></h4>
-            <button class="storyC">voir la story</button>
+            <h4>posté par: <?= $author->getPseudo() ?></h4>
+            <button class="storyC">story ↓ ↑</button>
         </div>
          <?php
     } ?>
     </div>
 
-    <div class="containerform">
-        <form action="/utils/insertArticle.php" method="post" id="formArt">
-            <div class="divArea">
-                <input type="text" name="title" class="inputArt" placeholder="titre" required>
-            </div>
-            <div class="divArea">
-                <textarea id="textArt" name="content" placeholder="story" required></textarea>
-            </div>
-            <div class="divArea">
-                <input type="submit" class="inputArt">
-            </div>
-        </form>
-    </div>
+
 </div>
 <?php
     include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/footer.php';
