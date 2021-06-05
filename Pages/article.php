@@ -1,10 +1,12 @@
 <?php
 
-use MiniChat\Manager\userManager;
+    use MiniChat\Manager\userManager;
 
-include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/ArticleManager.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/ArticleManager.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
+
+
 
 ?>
 <h2>Articles</h2>
@@ -22,22 +24,23 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
             <div class="artTitle">
                 <h3><?= $article->getTitle() ?></h3>
             </div>
-            <p>
+            <p class="story">
                <?= $article->getContent() ?>
             </p>
-            <h4>rédiger par: <?= $author->getPseudo() ?></h4>
+            <h4>mise en ligne: <?= $author->getPseudo() ?></h4>
+            <button class="storyC">voir la story</button>
         </div>
          <?php
     } ?>
     </div>
 
     <div class="containerform">
-        <form action="/Modele/Manager/ArticleManager.php" method="post" id="formArt">
+        <form action="/utils/insertArticle.php" method="post" id="formArt">
             <div class="divArea">
-                <input type="text" class="inputArt" placeholder="titre">
+                <input type="text" name="title" class="inputArt" placeholder="titre" required>
             </div>
             <div class="divArea">
-                <textarea id="textArt" name="story" placeholder="story"></textarea>
+                <textarea id="textArt" name="content" placeholder="story" required></textarea>
             </div>
             <div class="divArea">
                 <input type="submit" class="inputArt">

@@ -1,6 +1,5 @@
 <?php
     include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
-    session_start();
 ?>
 <form method="post" action="../utils/connection.php">
 <div class="containerConnect container">

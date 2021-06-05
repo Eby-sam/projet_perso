@@ -15,18 +15,18 @@
     </form>
     <div id="lookImg">
         <?php
-            $request = DB::connectDB()->prepare("SELECT * FROM pic");
+            $request = DB::connectDB()->prepare("SELECT * FROM pic ORDER BY id DESC");
             $request->execute();
             $images = $request->fetchAll();
             foreach ($images as $image){
                 $src = '/Pages/upload/images/' . $image['img'];
-               // if(file_exists($src)){?>
+                //if(file_exists($src)){?>
 
                     <div class="fileDiv">
                         <img class="small-img" alt="<?= $image['img'] ?>" src="<?= $src ?>">
                     </div><?php
 
-               // }
+                //}
             }
         ?>
     </div>

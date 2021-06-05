@@ -1,5 +1,5 @@
 <?php
-namespace MinichatProjet\utils;
+
 
 class checkIsset {
 

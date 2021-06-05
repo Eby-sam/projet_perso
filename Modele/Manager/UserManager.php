@@ -18,13 +18,13 @@ class userManager
      */
     public function getUser(int $id): user
     {
-        $request = DB::connectDB()->prepare("SELECT * FROM user WHERE id=:id");
+        $request = DB::connectDB()->prepare("SELECT * FROM user INNER JOIN role ON user.role_fk = role.id WHERE user.id=:id");
         $request->bindValue(':id', $id);
         $request->execute();
         $user_data = $request->fetch();
 
         return new user($user_data['name'], $user_data['firstname'],
-             $user_data['pseudo'], $user_data['email'], $user_data['password'], $user_data['role_fk'], $user_data['activate']);
+             $user_data['pseudo'], $user_data['email'], $user_data['password'], $user_data['role'], $user_data['activate']);
     }
 
     /**
@@ -80,4 +80,5 @@ class userManager
         $message = wordwrap($message, 70,"\r\n");
         mail($to, $sujet, $message, $headers);
     }
+
 }

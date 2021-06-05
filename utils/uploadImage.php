@@ -41,8 +41,6 @@ if (isset($_FILES["img"]) && $_FILES["img"]["error"] === 0) {
             $request->execute();
 
             header('location: ../Pages/galerie.php');
-
-
         }
         else {
             echo ' le fichier  est trop volumineux';

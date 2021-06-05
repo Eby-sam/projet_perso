@@ -6,10 +6,10 @@
     }
     if(date("H")<18)
         $bienvenue="Bonjour et bienvenue ".
-            $_SESSION["prenomNom"].
+            $_SESSION["pseudo"].
             " dans votre espace personnel";
     else
         $bienvenue="Bonsoir et bienvenue ".
-            $_SESSION["prenomNom"].
+            $_SESSION["pseudo"].
             " dans votre espace personnel";
 ?>

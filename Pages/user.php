@@ -1,6 +1,7 @@
 <?php
 
 use MiniChat\Manager\userManager;
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
 
 include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
     session_start();
@@ -18,18 +19,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
             <div id="fondInfo">
                 <div id="infoUser2">
                     <?php
-                    $name = new userManager();
-                    $Firstname = new userManager();
-                    $pseudo = new userManager();
-                    $email = new userManager();
-                    $role_fk = new userManager();
+                    $user = new userManager();
+                    $userData = $user->getUser(1);
                     ?>
-                    <p>Nom : <?= $name->getName() ?></p>
-                    <p>Prenom : <?= $Firstname->getFirstname() ?></p>
-                    <p>Pseudo : <?= $pseudo->getPseudo() ?></p>
-                    <p>Email : <?= $email->getEmail() ?></p>
-                    <p>Role : <?= $role_fk->getRole_fk() ?></p>
-
+                    <p>Nom : <?= $userData->getName() ?></p>
+                    <p>Prenom : <?= $userData->getFirstname() ?></p>
+                    <p>Pseudo : <?= $userData->getPseudo() ?></p>
+                    <p>Email : <?= $userData->getEmail() ?></p>
+                    <p>Role : <?= $userData->getRoleFk() ?></p>
                 </div>
             </div>
         </div>

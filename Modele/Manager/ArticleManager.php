@@ -3,6 +3,7 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . '/Classes/DB.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . '/Modele/Entity/Article.php';
 
+
 use MinichatProjet\Classes\DB;
 use MinichatProjet\Entity\article;
 
@@ -17,9 +18,9 @@ class ArticleManager {
      */
     public function addArticle($title, $content, $user_fk): bool {
         $request = DB::connectDB()->prepare("INSERT INTO article (title, content, user_fk)
-                                                         VALUES ( ?, ?, ?)");
-        $request->bindValue(':title', DB::cleanupData($title->getTitle()));
-        $request->bindValue(':content', DB::cleanupData($content->getContent(), false));
+                                                         VALUES ( :title, :content, :user_fk)");
+        $request->bindValue(':title', DB::cleanupData($title));
+        $request->bindValue(':content', DB::cleanupData($content, false));
         $request->bindValue(':user_fk', $user_fk);
 
         return $request->execute() && DB::connectDB()->lastInsertId() > 0;

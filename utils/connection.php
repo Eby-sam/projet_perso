@@ -3,7 +3,7 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . '/utils/checkIsset.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . '/Classes/DB.php';
 
-use MinichatProjet\utils\checkIsset;
+
 use MiniChatProjet\Classes\DB;
 
 session_start();
@@ -18,8 +18,10 @@ if((new checkIsset)->issetPostParams('email', 'password')) {
     $data = $sql->fetch();
     if(password_verify($_POST['password'] , $data['password'])) {
         $_SESSION['user']['email'] = $_POST['email'];
+        $_SESSION['id'] = $data['id'];
         header('location: ../index.php');
     }
+
     else  {
         $_SESSION['message'] = "le mot de passe est incorrect !";
         header('location: ../Pages/connect.php');

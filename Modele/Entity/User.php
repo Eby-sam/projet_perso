@@ -7,7 +7,7 @@ class user {
     private string $pseudo;
     private string $email;
     private string $password;
-    private int $role_fk;
+    private string $role_fk;
     private bool $activate;
     private ?int $id;
 
@@ -18,11 +18,11 @@ class user {
      * @param string $pseudo
      * @param string $email
      * @param string $password
-     * @param int $role_fk
+     * @param string $role_fk
      * @param bool $activate
      * @param int|null $id
      */
-    public function __construct(string $name, string $firstname, string $pseudo, string $email, string $password, int $role_fk, bool $activate, int $id = null)
+    public function __construct(string $name, string $firstname, string $pseudo, string $email, string $password, string $role_fk, bool $activate, int $id = null)
     {
         $this->id = $id;
         $this->name = $name;
@@ -131,9 +131,9 @@ class user {
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getRoleFk(): int
+    public function getRoleFk(): string
     {
         return $this->role_fk;
     }

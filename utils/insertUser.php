@@ -1,6 +1,6 @@
 <?php
 
-use MinichatProjet\utils\checkIsset;
+
 use MiniChat\Manager\userManager;
 
 
