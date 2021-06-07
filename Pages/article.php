@@ -46,7 +46,7 @@
             <div class="creatDelete">
                 <button class="storyC">story ↓ ↑</button>
                 <button class="delete">
-                    <a href="../utils/delete.php">X</a>
+                    <a href="../utils/delete.php?id=<?= $article->getId() ?>">X</a>
                 </button>
             </div>
         </div>

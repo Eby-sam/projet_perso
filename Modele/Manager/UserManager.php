@@ -81,9 +81,4 @@ class userManager
         mail($to, $sujet, $message, $headers);
     }
 
-    public function getRole()
-    {
-    }
-
-
 }
