@@ -5,7 +5,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/RoleManager.php';
 
 include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
-    session_start();
     if(!isset($_SESSION["user"]["email"])){
         header('Location: ../connect.php');
     }

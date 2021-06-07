@@ -7,13 +7,8 @@
         <li class="listMenu">
             <a title="Page article" href="article.php"><i class="fas fa-external-link-alt"></i> CreepyPasta</a>
         </li>
-
         <li class="listMenu">
             <a title="Page Galerie" href="galerie.php"><i class="fas fa-folder"></i> Galerie</a>
-        </li>
-
-        <li class="listMenu">
-            <a title="Page Video" href="video.php"><i class="fas fa-play"></i> Vidéo</a>
         </li>
     </ul>
 </div>

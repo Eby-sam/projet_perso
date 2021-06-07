@@ -66,6 +66,7 @@ a:hover {
     width: 95%;
     margin: auto;
     border-radius: 10px;
+    padding-top: 15px;
 }
 
 #banniereUser {
@@ -78,6 +79,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     color: black;
+    border-bottom: 1px solid darkred;
 }
 
 #imgUser {
@@ -138,7 +140,6 @@ h1{
 
 #block-one {
     width: 100%;
-    height: 800px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -153,6 +154,7 @@ h1{
     width: 100%;
     float: left;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -202,7 +204,7 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
+    padding-top: 50px;
 }
 
 .listMenu {
@@ -266,6 +268,17 @@ h3 {
     font-size: 2.5rem;
 }
 
+.actuTitle {
+    color: #ff0000;
+    font-size: 2rem;
+    font-family: "Ink Free";
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid red;
+}
+
 .div_dev {
     width: 100%;
     height: 90%;
@@ -290,7 +303,6 @@ h3 {
 
 .container {
     width: 100%;
-    height: 925px;
     display: flex;
     align-items: center;
     background-size: cover;
@@ -299,14 +311,16 @@ h3 {
 }
 
 .containerInscript {
-    justify-content: flex-end;
     background-image: url("../img/ombre1.jpg");
     background-position: bottom;
+    height: 900px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .containerConnect {
-    justify-content: flex-start;
-    margin-right: 50px;
+
+   height: 900px;
     background-image: url("../img/sombre1.png");
 }
 
@@ -314,6 +328,7 @@ h3 {
     justify-content: center;
     align-items: center;
     background-image: url("../img/menu1.jpg");
+    height: 800px;
 }
 
 .large {
@@ -388,7 +403,7 @@ input:hover {
 }
 
 #articleR {
-    width: 85%;
+    width: 98%;
 }
 
 h6 {
@@ -529,24 +544,33 @@ h5 {
 }
 
 .fileDiv {
-    max-width: 20%;
+    width: 20%;
     height: 10rem;
-    margin: 1px;
+    margin: 3px;
     padding: 1px;
     border: 1px solid red;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+.file-news{
+    width: 100%;
+    height: 10rem;
+    margin: 3px;
+    padding: 1px;
+    border: 1px solid red;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .containerform {
     width: 90%;
     border: 1px solid red;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
 
 }
 
@@ -554,7 +578,7 @@ h5 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-
+    display: none;
 }
 
 #contForm {
@@ -587,10 +611,12 @@ h5 {
 .artAticle {
     border: 1px solid #b70505;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 15px;
     border-bottom: 1px solid #5b4f4f;
     background-color: #cdcaca;
+    display:flex;
+    flex-direction: column;
 }
 
 
@@ -606,6 +632,8 @@ h5 {
     border-bottom: 1px solid ;
     border-color: #840101;
     color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #addAppears {
@@ -617,4 +645,201 @@ h5 {
     font-weight: bold;
     font-style: italic;
     border-radius: 10px;
+}
+
+.creatDelete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.delete {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    color: #b70505;
+}
+
+.new-pics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {      /* mes règles responsive (600px) */
+    #title {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .actuTitle {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    li {
+        border-radius: 5px;
+        width: 20%;
+    }
+
+    #block-one {
+        flex-direction: column-reverse;
+    }
+
+    #zone2 , #zone1{
+        width: 100%;
+    }
+
+    .file-news {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .small-img {
+        width: 60%;
+    }
+
+
+
+    #clickListe {
+        display: block;
+        width: 100%;
+        padding-top: 0;
+
+    }
+
+    .listMenu {
+        width: 100%;
+    }
+
+    .containerMenu {
+        display: block;
+        height: 0;
+    }
+
+    .containerArt {
+        margin-left: 0;
+        display: block;
+        width: 100%;
+    }
+
+    #contForm {
+        width: 100%;
+    }
+
+    #lookImg {
+        flex-direction: column;
+    }
+
+    #galerieForm .fileDiv{
+        width: 100%;
+    }
+
+    .large {
+        width: 100%;
+        height: 700px;
+    }
+
+    form .container {
+        display: block;
+    }
+
+    #containerUser {
+        width: 100%;
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {   /* mes règles responsive (450px) */
+    #title {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .actuTitle {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    li {
+        border-radius: 5px;
+        width: 20%;
+    }
+
+    #block-one {
+        flex-direction: column-reverse;
+    }
+
+    #zone2, #zone1 {
+        width: 100%;
+    }
+
+    .small-img {
+        width: 80%;
+    }
+
+    #clickListe {
+        display: block;
+        width: 100%;
+        padding-top: 0;
+
+    }
+
+    .listMenu {
+        width: 100%;
+    }
+
+    .containerMenu {
+        display: block;
+        height: 0;
+    }
+
+    .containerArt {
+        margin-left: 0;
+        display: block;
+        width: 100%;
+    }
+
+    #contForm {
+        width: 100%;
+    }
+
+    #lookImg {
+        flex-direction: column;
+    }
+
+    #galerieForm .fileDiv {
+        width: 100%;
+    }
+
+    .large {
+        width: 100%;
+        height: 700px;
+    }
+
+    form .container {
+        display: block;
+    }
+
+    #containerUser {
+        width: 100%;
+        padding-top: 0;
+    }
 }

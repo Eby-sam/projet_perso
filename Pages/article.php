@@ -6,8 +6,6 @@
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/ArticleManager.php';
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
 
-
-
 ?>
 <h2>CreepyPasta</h2>
 
@@ -27,9 +25,7 @@
                 </div>
             </form>
         </div>
-
     </div>
-
 
     <div class="containerArticle">
     <?php
@@ -47,13 +43,16 @@
                <?= nl2br($article->getContent()) ?>
             </p>
             <h4>posté par: <?= $author->getPseudo() ?></h4>
-            <button class="storyC">story ↓ ↑</button>
+            <div class="creatDelete">
+                <button class="storyC">story ↓ ↑</button>
+                <button class="delete">
+                    <a href="../utils/delete.php">X</a>
+                </button>
+            </div>
         </div>
          <?php
     } ?>
     </div>
-
-
 </div>
 <?php
     include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/footer.php';

@@ -34,7 +34,7 @@ if (isset($_FILES["img"]) && $_FILES["img"]["error"] === 0) {
             $tmp_name = $_FILES['img']["tmp_name"];
             $name = $_FILES["img"]["name"];
             $name = getRandomName($name);
-            move_uploaded_file($tmp_name, '../pic/' . $name);
+            move_uploaded_file($tmp_name, '../Pages/upload/images/' . $name);
 
             $request = DB::connectDB()->prepare("INSERT INTO pic (img) VALUES ( :img)");
             $request->bindValue(':img',$name);

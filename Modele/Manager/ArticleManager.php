@@ -76,11 +76,17 @@ class ArticleManager {
 
     /**
      * Return all articles from newest to oldest.
+     * @param null $limit
      * @return array
      */
-    public function getAllArticles(): array {
+    public function getAllArticles($limit=null): array {
+        if(is_null($limit)) {
+            $clause = '';
+        } else {
+            $clause = " LIMIT $limit";
+        }
         $allArticles = [];
-        $request = DB::connectDB()->prepare("SELECT * FROM article ORDER BY id DESC");
+        $request = DB::connectDB()->prepare("SELECT * FROM article ORDER BY id DESC" . $clause);
         if($request->execute() && $articles = $request->fetchAll(PDO::FETCH_ASSOC)) {
             foreach ($articles as $ar) {
                 $allArticles[] = new Article($ar['title'], $ar['content'], $ar['user_fk'], $ar['id']);

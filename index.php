@@ -1,4 +1,11 @@
 <?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/ArticleManager.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Classes/DB.php';
+
+    use MiniChat\Manager\userManager;
+    use MiniChatProjet\Classes\DB;
+
     include 'Pages/_partials/head.php';
 ?>
     <header>
@@ -12,13 +19,30 @@
     <div id="block-one">
         <div id="zone1">
             <div class="part1 part" id="actu">
-                <div class="title">
-                    <h2>Actualité</h2>
-                </div>
-                <div id="article">
+                <h2>actualité</h2>
+                <h3 class="actuTitle">Dernières CreepyPasta</h3>
 
+                <?php
+                $articleManager = new ArticleManager();
+                $userManager = new UserManager();
+                $articles = $articleManager->getAllArticles(5);
 
-                </div>
+                foreach($articles as $key => $article) {
+                    $author = $userManager->getUser($article->getUser_fk()); ?>
+                    <div class="artAticle">
+                        <div class="artTitle">
+                            <h3><?= $article->getTitle() ?> (CreepyPasta)</h3>
+                        </div>
+                        <p class="story">
+                            <?= nl2br($article->getContent()) ?>
+                        </p>
+                        <h4>posté par: <?= $author->getPseudo() ?></h4>
+                        <div class="creatDelete">
+                            <a href="Pages/article.php"> voir l'article -></a>
+                        </div>
+                    </div>
+                    <?php
+                } ?>
             </div>
         </div>
 
@@ -28,13 +52,21 @@
                     <h3>Articles récents</h3>
                 </div>
                 <div id="articleR">
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
+                    <h3 class="actuTitle">dernières images</h3>
+                    <div class="new-pics">
+                        <?php
+                        $request = DB::connectDB()->prepare("SELECT * FROM pic ORDER BY id DESC LIMIT 3");
+                        $request->execute();
+                        $images = $request->fetchAll();
+                        foreach ($images as $image){
+                            $src = '/Pages/upload/images/' . $image['img'];
+                            ?>
+                            <div class="file-news">
+                            <img class="small-img" alt="<?= $image['img'] ?>" src="<?= $src ?>">
+                            </div><?php
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

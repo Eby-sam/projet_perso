@@ -6,7 +6,6 @@ session_start();
 
 if((new checkIsset())->issetPostParams('title', 'content')) {
 
-
     $manager = new ArticleManager();
     $manager->addArticle($_POST['title'],$_POST['content'],$_SESSION['id']);
     header('location: ../Pages/article.php');

@@ -8,7 +8,6 @@
 
 <div id="galerieForm">
     <form method="POST" action="../utils/uploadImage.php" enctype="multipart/form-data" class="formFile">
-        <input type="text" name="imgName" placeholder="nom de l'image" class="fichier"><br>
         <input type="file" name="img" id="img" class="fichier" />&nbsp;( Max : 8Mo)<br>
         <div><input type="submit" class="btn fichier" value="envoyer" /></div>
         <input type="hidden" value="b" name="env"/>
@@ -31,8 +30,3 @@
         ?>
     </div>
 </div>
-
-
-<?php
-     include 'footer.php';
-?>
