@@ -1,10 +1,14 @@
 <?php
+session_start();
+if(!isset($_SESSION["user"]["email"])){
+    header('Location: /Pages/connect.php');
+}
+use MiniChat\Manager\userManager;
 
-    use MiniChat\Manager\userManager;
+include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/ArticleManager.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
 
-    include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/ArticleManager.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
 
 ?>
 <h2>CreepyPasta</h2>
