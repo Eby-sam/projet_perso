@@ -4,11 +4,13 @@ if(!isset($_SESSION["user"]["email"])){
     header('Location: /Pages/connect.php');
 }
 use MiniChat\Manager\userManager;
+use MiniChatProjet\Classes\DB;
 
 include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/ArticleManager.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
-
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Entity/Role.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/RoleManager.php';
 
 ?>
 <h2>CreepyPasta</h2>
@@ -49,9 +51,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Modele/Manager/UserManager.php';
             <h4>posté par: <?= $author->getPseudo() ?></h4>
             <div class="creatDelete">
                 <button class="storyC">story ↓ ↑</button>
-                <button class="delete">
-                    <a href="../utils/delete.php?id=<?= $article->getId() ?>">X</a>
-                </button>
             </div>
         </div>
          <?php

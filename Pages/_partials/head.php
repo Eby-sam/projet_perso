@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-
+<!-- Head of Pages -->
 <!doctype html>
 <html lang="fr">
 <head>

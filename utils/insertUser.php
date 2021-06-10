@@ -10,6 +10,7 @@ session_start();
 
     if((new checkIsset())->issetPostParams('name', 'firstname', 'pseudo', 'email', 'password')) {
 
+        //add new user
         $manager = new userManager();
         $manager->addUser($_POST['name'],$_POST['firstname'],$_POST['pseudo'],$_POST['email'],$_POST['password']);
         header('location: ../index.php');

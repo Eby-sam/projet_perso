@@ -11,7 +11,7 @@ class RoleManager {
      */
     public function getRole(int $roleId): ?Role {
         $role = null;
-        $request = DB::connectDb()->prepare("SELECT * FROM role WHERE id=:id");
+        $request = DB::connectDB()->prepare("SELECT * FROM role WHERE id=:id");
         $request->bindValue(':id', $roleId);
         if($request->execute() && $data = $request->fetch()) {
             $role = new Role();
