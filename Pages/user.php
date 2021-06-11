@@ -26,8 +26,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Pages/_partials/head.php';
                     <p>Nom :
                         <?= $userData->getName() ?>
                     </p>
-                    <p>Prenom :
-                        <?= $userData->getFirstname() ?>
+                    <p>Prenom : <?= $userData->getFirstname() ?>
                     </p>
                     <p>Pseudo : <?= $userData->getPseudo() ?>
                     </p>

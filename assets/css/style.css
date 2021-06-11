@@ -768,11 +768,7 @@ h5 {
         font-size: 32px;
     }
 
-    h2 {
-        font-size: 28px;
-    }
-
-    .actuTitle {
+    h2 ,.actuTitle {
         font-size: 28px;
     }
 
@@ -789,7 +785,7 @@ h5 {
         flex-direction: column-reverse;
     }
 
-    #zone2, #zone1 {
+    #zone2, #zone1 ,.listMenu , #contForm {
         width: 100%;
     }
 
@@ -804,10 +800,6 @@ h5 {
 
     }
 
-    .listMenu {
-        width: 100%;
-    }
-
     .containerMenu {
         display: block;
         height: 0;
@@ -816,10 +808,6 @@ h5 {
     .containerArt {
         margin-left: 0;
         display: block;
-        width: 100%;
-    }
-
-    #contForm {
         width: 100%;
     }
 

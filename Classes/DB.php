@@ -43,7 +43,7 @@ class DB {
      * @param bool $tags
      * @return string
      */
-    public static function cleanupData(string $data, $tags=true): string {
+    public static function cleanupData(string $data, bool $tags=true): string {
         $string = addslashes($data);
         if($tags) {
             $string = strip_tags($string);
