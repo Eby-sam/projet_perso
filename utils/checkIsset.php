@@ -1,6 +1,5 @@
 <?php
 
-
 class checkIsset {
 
     function issetPostParams(string ...$params): bool {
